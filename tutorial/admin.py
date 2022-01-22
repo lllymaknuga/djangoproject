@@ -5,4 +5,4 @@ from .models import Marker
 
 @admin.register(Marker)
 class MarkerAdmin(admin.OSMGeoAdmin):
-    list_display = ('name', 'location', 'marker_type')
+    list_display = ['location']
