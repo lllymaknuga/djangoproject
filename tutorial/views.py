@@ -9,20 +9,6 @@ from tutorial.models import Marker
 from tutorial.serializer import MarkerSerializer, MarkerListSerializer
 
 
-# from rest_framework import status
-# from rest_framework.response import Response
-#
-#
-# class SchoolViewSet(APIView):
-#     queryset = School.objects.all()
-#     serializer_class = SchoolSerializer
-#
-#     def post(self, request):
-#         ser = self.serializer_class(data=request.data)
-#         if ser.is_valid():
-#             School.objects.create(location=ser.validated_data['location'])
-#             return Response(status=status.HTTP_200_OK)
-
 class MarkerViewPost(APIView):
     serializer_class = MarkerSerializer
 
