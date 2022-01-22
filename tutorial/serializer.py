@@ -24,7 +24,6 @@ class MarkerSerializer(ModelSerializer):
         fields = ['location', 'srid']
 
     def save(self, **kwargs):
-        # print(self.data['location']['latitude'])
         Marker.objects.create(location=Point(x=self.validated_data['location'][0],
                                              y=self.validated_data['location'][1],
                                              srid=self.validated_data['srid']))

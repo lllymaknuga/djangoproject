@@ -11,7 +11,6 @@ from tutorial.serializer import MarkerSerializer
 
 class MarkerViewPost(APIView):
     def post(self, request):
-        print(request.data)
         serializer = MarkerSerializer(data=request.data)
         if serializer.is_valid():
             serializer.save()
